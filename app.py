@@ -307,7 +307,7 @@ elif st.session_state.view == "details":
     left, right = st.columns([1, 2.4], gap="large")
 
     with left:
-        st.markdown("<div class='card'>", unsafe_allow_html=True)
+        # st.markdown("<div class='card'>", unsafe_allow_html=True)
         if data.get("poster_url"):
             st.image(data["poster_url"], use_column_width=True)
         else:
@@ -315,7 +315,7 @@ elif st.session_state.view == "details":
         st.markdown("</div>", unsafe_allow_html=True)
 
     with right:
-        st.markdown("<div class='card'>", unsafe_allow_html=True)
+        # st.markdown("<div class='card'>", unsafe_allow_html=True)
         st.markdown(f"## {data.get('title','')}")
         release = data.get("release_date") or "-"
         genres = ", ".join([g["name"] for g in data.get("genres", [])]) or "-"
